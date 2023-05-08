@@ -1,0 +1,28 @@
+.about {
+  width: 100%;
+  margin: 0 auto;
+
+  .row {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    text-align: center;
+    height: calc(100vh - 120px);
+
+    h1 {
+      font-size: 40px;
+      margin: 0 auto 40px auto;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 30px;
+
+      span {
+        color: var(--blue);
+        font-size: 30px;
+      }
+    }
+  }
+}

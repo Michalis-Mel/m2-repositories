@@ -1,0 +1,132 @@
+:root {
+  --dark-grey: #292727;
+  --light-grey: #464343;
+  --white: #efecec;
+  --blue: #5392d4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-grey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+p {
+  color: var(--white);
+}
+
+.row {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--dark-grey);
+  max-height: 120px;
+
+  .row {
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    .logo {
+      width: 80px;
+      height: 80px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        font-size: 0;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      li {
+        margin-left: 40px;
+
+        a {
+          color: var(--white);
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 500;
+          padding-bottom: 5px;
+          box-sizing: border-box;
+          position: relative;
+          overflow: hidden;
+          display: block;
+
+          &:after {
+            content: "";
+            width: 50px;
+            height: 2px;
+            background: var(--blue);
+            position: absolute;
+            left: -50px;
+            bottom: 0;
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            color: var(--blue);
+          }
+
+          &:hover:after {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .spinner {
+    border: 4px solid var(--dark-grey);
+    border-left-color: var(--blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@import "./_homePage.scss";
+@import "./_aboutPage.scss";
+@import "./_reposPage.scss";

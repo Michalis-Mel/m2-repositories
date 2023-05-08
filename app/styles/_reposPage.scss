@@ -1,0 +1,86 @@
+.repos {
+  width: 100%;
+  margin: 50px auto 0 auto;
+
+  .row {
+    flex-flow: column nowrap;
+    align-items: center;
+
+    h1 {
+      font-size: 40px;
+
+      margin: 0 auto 40px auto;
+    }
+
+    .repos-list {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+
+      .repo {
+        width: 33.3%;
+        flex: 0 0 33.3%;
+        padding: 30px;
+        box-sizing: border-box;
+
+        .repo_con {
+          background: var(--white);
+          border-radius: 20px;
+          padding: 20px;
+          box-sizing: border-box;
+          transition: all 0.3s ease-in-out;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          text-align: center;
+
+          &:hover {
+            box-shadow: 0 0 30px #000;
+          }
+
+          h4 {
+            flex-grow: 1;
+            font-size: 28px;
+            margin-bottom: 4px;
+            color: var(--dark-grey);
+          }
+          span {
+            flex-grow: 1;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--dark-grey);
+          }
+          p {
+            flex-grow: 1;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            margin: 20px 0;
+            color: var(--dark-grey);
+          }
+
+          .git_link {
+            width: fit-content;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            color: var(--dark-grey);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+
+            svg {
+              margin-left: 7px;
+            }
+
+            &:hover {
+              color: var(--blue);
+            }
+          }
+        }
+      }
+    }
+  }
+}
