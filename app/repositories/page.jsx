@@ -3,10 +3,6 @@ import Link from "next/link";
 import { VscGithubInverted } from "react-icons/vsc";
 import Tilt from "react-parallax-tilt";
 
-export const metadata = {
-  title: "Repositories",
-};
-
 async function fetchRepos() {
   const response = await fetch(
     "https://api.github.com/users/Michalis-Mel/repos",
